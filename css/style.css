@@ -19,26 +19,29 @@
     --gray-500:#343A40;
   }
   
-  *{
+*{
     box-sizing: border-box;
-  }
-  
-  body{
+}
+
+body{
     background-color: var(--ligth-blue-100);
     font-family: 'Inter';
-  
-  }
-  
-  main{
+}
+
+main{
     display: flex;
-    max-height: 70vh;
+}
+
+.logo{
+    width: 5%;
+}
+.encriptador{
+    margin-top: 5vh;
+    width: 60%;
     position: relative;
-  }
-  
-  .textoAEncriptar{
-    position: absolute;
-    left: 3%;
-    top: 30px;
+}
+
+.textoAEncriptar{
     width: 93%;
     height: 65vh;
     border:none;
@@ -49,56 +52,15 @@
     line-height: 150%;
     background-color: transparent;
     color: var(--dark-blue-500);
-  }
-  
-  .textoAEncriptar:focus {
-    border-color: var(--Dark-blue-300);
-  }
-  
-  ::placeholder{
-    color: var(--Dark-blue-300);
-  }
-  
-  .desencriptado-texto{
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    resize: none;
-    width: 96%;
-    height: 50vh;
-    top: 5%;
-    left: 2%;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
-  }
-  
-  .pRelative{
-    position: relative;
-  }
-  
-  
-  .encriptador{
-    position: absolute;
-    width: 60%;
-    height: 90vh;
-    left: 3%;
-    top: 7%;
-    border-radius: 32px;
-  }
-  
-  .textoEncriptador{
+}
+
+.textoEncriptador{
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 8px;
-    position: absolute;
     padding-bottom:  1rem;
-    left: 10%;
-    top: 460px;
   }
   
   
@@ -108,11 +70,8 @@
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
-    position: absolute;
     width: 100%;
     height: 67px;
-    left: 13%;
-    top: 500px;
   }
   
   .encriptar{
@@ -130,75 +89,59 @@
     border-radius: 24px;
   
   }
-  
-  .copiar-a-portapepeles{
-    position: absolute;
-    padding: 13px;
-    width: 50%;
-    top: 80%;
-    left: 25%;
-    background: var(--dark-blue-300);
-    border-radius: 24px;
+
+  .textoAEncriptar:focus {
+    border-color: var(--Dark-blue-300);
   }
   
+  ::placeholder{
+    color: var(--Dark-blue-300);
+  }
   
-  
-  .area-de-mensaje{
-    position: absolute;
+
+.area-de-mensaje{
     width: 30%;
     height: 94vh;
-    left: 65%;
-    top: 4%;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.desencriptado-texto{
+    background-color: transparent;
+    border: none;
+    resize: none;
+    width: 96%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 70vh;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    margin-bottom: 30vh;
+}
   
-  }
-  
-  .logoCentro img{
-    width: 80%;
-    display: inline-block;
-    margin-left: 10%;
-    margin-top: 80px;
-  }
-  
-  .logoCentro h2{
-  width: 50%;
-  margin-left: 25%;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 120%;
-  text-align: center;
-  color: #343A40;
-  }
-  
-  .logoCentro p{
-  width: 50%;
-  margin-left: 25%;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  text-align: center;
-  color: #343A40;
-  }
-  
-  
-  footer{
-    position: absolute;
-    left: 0;
-    bottom: -8%;
-    width: 100%;
-    font-size: 1rem;
-    padding: 1px 0;
-    margin: 0;
-    background-color: var(--Dark-blue-300);
-    color: whitesmoke;
-  }
-  
-  footer p{
-    text-align: center;
-  }
+
+.copiar-a-portapepeles{
+    padding: 13px;
+    width: 50%;
+    background: var(--dark-blue-300);
+    border-radius: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 749px){
+    main{
+        flex-direction: column;
+    }
+
+    .encriptador, .area-de-mensaje{
+        width: 100%;
+    }
+
+}
